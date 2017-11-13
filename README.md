@@ -1,0 +1,2 @@
+# Restaurant-Menu-and-Billing-system..
+This is a program created using C as the programming language. This basically creates a direct connection between the customer and the chefs in the kitchen hence thereby eliminating the need for waiters. This helps to increase the pace during food service and it also cost effective. This system also displays the the total bill to the customer at the end of his/her meal. 
