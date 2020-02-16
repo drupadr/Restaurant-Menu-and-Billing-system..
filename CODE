@@ -1,0 +1,384 @@
+#include<stdio.h>
+#include<ctype.h>
+#include<math.h>
+void main()
+{
+    int cuisine,quantity,sum=0;
+    int north_dish,south_dish,italian_dish,chinese_dish,continental_dish,breads,addons,starters,dessert;
+    printf("Welcome customer!\n");
+    start:printf("Choose your cuisine\n");
+    here:printf("1.North Indian\n2.South Indian\n3.Italian\n4.Chinese\n5.Continental\n6.Indian Breads\n7.Starters\n8.Desserts\n9.Add-ons\n0.Exit\n");
+    scanf("%d",&cuisine);
+    if(cuisine>9)
+    {    printf("Invalid order,Please repeat\n");
+        goto start;
+    }
+    if(cuisine==0)
+    {    goto end;
+    }
+quantity=0;
+switch(cuisine)
+    {    case 1:printf("Choose your dish\n");
+        printf("1.Palak Paneer\t\t\tRs 100\n2.Kadai Paneer\t\t\tRs 150\n3.Veg Kadai\t\t\tRs 170\n4.Butter Chicken\t\tRs 200\n5.North Indian Thali\t\tRs 220\n");
+        scanf("%d",&north_dish);
+        switch(north_dish)
+        {    case 1:printf("How many would you like?\n");
+            scanf("%d",&quantity);
+            sum=sum+(100*quantity);
+            break;
+            case 2:printf("How many would you like?\n");
+            scanf("%d",&quantity);
+            sum=sum+(150*quantity);
+            break;
+            case 3:printf("How many would you like?\n");
+            scanf("%d",&quantity);
+            sum=sum+(170*quantity);
+            break;
+            case 4:printf("How many would you like?\n");
+            scanf("%d",&quantity);
+            sum=sum+(200*quantity);
+            break;
+            case 5:printf("How many would you like?\n");
+            scanf("%d",&quantity);
+            sum=sum+(220*quantity);
+            break;
+                    default:printf("Invalid Choice\n");
+        }
+        goto here;
+        break;
+       
+        case 2:printf("Choose your dish\n");
+        printf("1.Masala Dosa\t\t\tRs 60\n2.Idli Vada\t\t\tRs 60\n3.Rava Idli\t\t\tRs 70\n4.Chicken Biryani\t\tRs 200\n5.South Indian Thali\t\tRs 220\n");
+        scanf("%d",&south_dish);
+        switch(south_dish)
+        {    case 1:printf("How many would you like?\n");
+            scanf("%d",&quantity);
+            sum=sum+(60*quantity);
+            break;
+            case 2:printf("How many would you like?\n");
+            scanf("%d",&quantity);
+            sum=sum+(60*quantity);
+            break;
+            case 3:printf("How many would you like?\n");
+            scanf("%d",&quantity);
+            sum=sum+(70*quantity);
+            break;
+            case 4:printf("How many would you like?\n");
+            scanf("%d",&quantity);
+            sum=sum+(200*quantity);
+            break;
+            case 5:printf("How many would you like?\n");
+            scanf("%d",&quantity);
+            sum=sum+(220*quantity);
+            break;
+                default:printf("Invalid Choice\n");
+        }
+    goto here;
+    break;
+    case 3:printf("Choose your dish\n");
+    printf("1.Veg Margherita\t\tRs 250\n2.Chicken Pizza\t\t\tRs 350\n3.Chicken Pasta\t\t\tRs 250\n4.Lasagna\t\t\tRs 500\n5.Chicken Ravioli\t\tRs 450\n");
+    scanf("%d",&italian_dish);
+    switch(italian_dish)
+    {    case 1:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(250*quantity);
+        break;
+        case 2:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(350*quantity);
+        break;
+        case 3:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(250*quantity);
+        break;
+        case 4:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(500*quantity);
+        break;
+        case 5:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(450*quantity);
+        break;
+        default:printf("Invalid Choice\n");
+    }
+    goto here;
+    break;
+    case 4:printf("Choose your dish\n");
+    printf("1.Chicken Momos\t\t\tRs 150\n2.Schezwan Noodles\t\tRs 200\n3.Chicken Manchurian\t\tRs 250\n4.Chinese Sizzler\t\tRs 500\n5.Chicken Fried Rice\t\tRs 200\n");
+    scanf("%d",&chinese_dish);
+    switch(chinese_dish)
+    {    case 1:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(150*quantity);
+        break;
+        case 2:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(200*quantity);
+        break;
+        case 3:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(250*quantity);
+        break;
+        case 4:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(500*quantity);
+        break;
+        case 5:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(200*quantity);
+        break;
+        default:printf("Invalid Choice\n");
+    }
+    goto here;
+    break;
+    case 5:printf("Choose your dish\n");
+    printf("1.Waffles with syrup\t\tRs 250\n2.Pancackes\t\t\tRs 200\n3.Shepherd's Pie\t\tRs 700\n4.Chicken Burger\t\tRs 220\n5.Hot wings\t\t\tRs 300\n");
+    scanf("%d",&continental_dish);
+    switch(continental_dish)
+    {    case 1:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(250*quantity);
+        break;
+        case 2:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(200*quantity);
+        break;
+        case 3:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(700*quantity);
+        break;
+        case 4:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(220*quantity);
+        break;
+        case 5:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(300*quantity);
+        break;
+        default:printf("Invalid Choice\n");
+    }
+    goto here;
+    break;
+    case 6:printf("Choose your dish\n");
+    printf("1.Butter Naan\t\t\tRs 40\n2.Stuffed Kulcha\t\tRs 50\n3.Roti\t\t\t\tRs 30\n");
+    scanf("%d",&breads);
+    switch(breads)
+    {    case 1:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(40*quantity);
+        break;
+        case 2:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(50*quantity);
+        break;
+        case 3:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(30*quantity);
+        break;
+        default:printf("Invalid Choice\n");
+    }
+    goto here;
+    break;
+    case 7:printf("Choose your dish\n");
+    printf("1.Tomato Soup\t\t\tRs 100\n2.Masala Paapad\t\t\tRs 50\n3.Chicken Popcorn\t\tRs 150\n4.Chicken Tikka\t\t\tRs 250\n5.Paneer Tikka\t\t\tRs 200\n");
+    scanf("%d",&starters);
+    switch(starters)
+    {    case 1:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(100*quantity);
+        break;
+        case 2:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(50*quantity);
+        break;
+        case 3:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(150*quantity);
+        break;
+        case 4:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(250*quantity);
+        break;
+        case 5:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(200*quantity);
+        break;
+        default:printf("Invalid Choice\n");
+    }
+    goto here;
+    break;
+    case 8:printf("Choose your dish\n");
+    printf("1.Choco Lava cake\t\tRs 100\n2.Sundae\t\t\tRs 120\n3.Gulaab Jamun\t\t\tRs 50\n4.Red Velvet Cake\t\tRs 150\n5.Donut\t\t\t\tRs 80\n");
+    scanf("%d",&dessert);
+    switch(dessert)
+    {    case 1:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(100*quantity);
+        break;
+        case 2:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(120*quantity);
+        break;
+        case 3:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(50*quantity);
+        break;
+        case 4:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(150*quantity);
+        break;
+        case 5:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(80*quantity);
+        break;
+        default:printf("Invalid Choice\n");
+    }
+    goto here;
+    break;
+    case 9:printf("Choose your dish\n");
+    printf("1.Green Salad\t\tRs 50\n2.Chutney\t\tRs 20\n3.Sambar\t\tRs 20\n4.Coffee\t\tRs 30\n");
+    scanf("%d",&addons);
+    switch(addons)
+    {    case 1:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(50*quantity);
+        break;
+        case 2:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(20*quantity);
+        break;
+        case 3:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(20*quantity);
+        break;
+        case 4:printf("How many would you like?\n");
+        scanf("%d",&quantity);
+        sum=sum+(30*quantity);
+        break;
+        default:printf("Invalid Choice\n");
+    }
+    goto here;
+    break;
+}
+end:printf("Total Amount = Rs %d",sum);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Welcome customer!
+Choose your cuisine
+1.North Indian
+2.South Indian
+3.Italian
+4.Chinese
+5.Continental
+6.Indian Breads
+7.Starters
+8.Desserts
+9.Add-ons
+0.Exit
+1
+Choose your dish
+1.Palak Paneer			Rs 100
+2.Kadai Paneer			Rs 150
+3.Veg Kadai			Rs 170
+4.Butter Chicken		Rs 200
+5.North Indian Thali		Rs 220
+2
+How many would you like?
+2
+1.North Indian
+2.South Indian
+3.Italian
+4.Chinese
+5.Continental
+6.Indian Breads
+7.Starters
+8.Desserts
+9.Add-ons
+0.Exit
+1
+Choose your dish
+1.Palak Paneer			Rs 100
+2.Kadai Paneer			Rs 150
+3.Veg Kadai			Rs 170
+4.Butter Chicken		Rs 200
+5.North Indian Thali		Rs 220
+4
+How many would you like?
+1
+1.North Indian
+2.South Indian
+3.Italian
+4.Chinese
+5.Continental
+6.Indian Breads
+7.Starters
+8.Desserts
+9.Add-ons
+0.Exit
+6
+Choose your dish
+1.Butter Naan			Rs 40
+2.Stuffed Kulcha		Rs 50
+3.Roti				Rs 30
+3
+How many would you like?
+7
+1.North Indian
+2.South Indian
+3.Italian
+4.Chinese
+5.Continental
+6.Indian Breads
+7.Starters
+8.Desserts
+9.Add-ons
+0.Exit
+7
+Choose your dish
+1.Tomato Soup			Rs 100
+2.Masala Paapad			Rs 50
+3.Chicken Popcorn		Rs 150
+4.Chicken Tikka			Rs 250
+5.Paneer Tikka			Rs 200
+4
+How many would you like?
+1
+1.North Indian
+2.South Indian
+3.Italian
+4.Chinese
+5.Continental
+6.Indian Breads
+7.Starters
+8.Desserts
+9.Add-ons
+0.Exit
+8
+Choose your dish
+1.Choco Lava cake		Rs 100
+2.Sundae			Rs 120
+3.Gulaab Jamun			Rs 50
+4.Red Velvet Cake		Rs 150
+5.Donut				Rs 80
+4
